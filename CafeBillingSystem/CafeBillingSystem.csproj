@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FA6CC26F-34A4-4FAE-9AC7-C469173D4743}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>CafeBillingSystem</RootNamespace>
+    <AssemblyName>CafeBillingSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="itextsharp">
+      <HintPath>..\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BillPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BillPage.Designer.cs">
+      <DependentUpon>BillPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cafedbDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cafedbDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CashierForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CashierForm.Designer.cs">
+      <DependentUpon>CashierForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CashierLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CashierLogin.Designer.cs">
+      <DependentUpon>CashierLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CashierUpdatePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CashierUpdatePassword.Designer.cs">
+      <DependentUpon>CashierUpdatePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChangeItemCost.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangeItemCost.Designer.cs">
+      <DependentUpon>ChangeItemCost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Database Connection\BillDB.cs" />
+    <Compile Include="Database Connection\BillLineDB.cs" />
+    <Compile Include="Database Connection\CashierDB.cs" />
+    <Compile Include="Database Connection\cashierlogin.cs" />
+    <Compile Include="Database Connection\DatabaseConnection.cs" />
+    <Compile Include="Database Connection\ItemDB.cs" />
+    <Compile Include="Database Connection\Owner.cs" />
+    <Compile Include="Database Connection\ownerlogin.cs" />
+    <Compile Include="Entity\BillEntity.cs" />
+    <Compile Include="Entity\BillLineEntity.cs" />
+    <Compile Include="Entity\cashier.cs" />
+    <Compile Include="Entity\cashierLoginEntity.cs" />
+    <Compile Include="Entity\itemEntity.cs" />
+    <Compile Include="Entity\owner.cs" />
+    <Compile Include="Entity\ownerLoginEntity.cs" />
+    <Compile Include="HomePage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HomePage.Designer.cs">
+      <DependentUpon>HomePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageCashier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageCashier.Designer.cs">
+      <DependentUpon>ManageCashier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OwnerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OwnerForm.Designer.cs">
+      <DependentUpon>OwnerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OwnerLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OwnerLogin.Designer.cs">
+      <DependentUpon>OwnerLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OwnerUpdatePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OwnerUpdatePassword.Designer.cs">
+      <DependentUpon>OwnerUpdatePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SellRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SellRecord.Designer.cs">
+      <DependentUpon>SellRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShowCashierInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowCashierInfo.Designer.cs">
+      <DependentUpon>ShowCashierInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShowOwnerInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowOwnerInfo.Designer.cs">
+      <DependentUpon>ShowOwnerInfo.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BillPage.resx">
+      <DependentUpon>BillPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CashierForm.resx">
+      <DependentUpon>CashierForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CashierLogin.resx">
+      <DependentUpon>CashierLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CashierUpdatePassword.resx">
+      <DependentUpon>CashierUpdatePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeItemCost.resx">
+      <DependentUpon>ChangeItemCost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomePage.resx">
+      <DependentUpon>HomePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageCashier.resx">
+      <DependentUpon>ManageCashier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OwnerForm.resx">
+      <DependentUpon>OwnerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OwnerLogin.resx">
+      <DependentUpon>OwnerLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OwnerUpdatePassword.resx">
+      <DependentUpon>OwnerUpdatePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SellRecord.resx">
+      <DependentUpon>SellRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowCashierInfo.resx">
+      <DependentUpon>ShowCashierInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowOwnerInfo.resx">
+      <DependentUpon>ShowOwnerInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="cafedbDataSet.xsc">
+      <DependentUpon>cafedbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="cafedbDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cafedbDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cafedbDataSet.xss">
+      <DependentUpon>cafedbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kisspng-cafe-coffee-tea-clip-art-tea-time-5ad4391ce13fe5.9306855115238576929226.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\black_minimalistic_dark_pattern_wall_textures_silver_1920x1080.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printer-icon-1009.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
